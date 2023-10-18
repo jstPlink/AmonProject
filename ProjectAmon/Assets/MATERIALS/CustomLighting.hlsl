@@ -128,4 +128,15 @@ void AdditionalLights_half(half3 SpecColor, half Smoothness, half3 WorldPosition
     Specular = specularColor;
 }
 
+void TransformWorldToShadowCoord(vector location)
+{
+    printf("test");
+}
+
+void LightingSpecular(float3 var1, float3 var2, float3 var3, float3 arana, float4 var41, float araaraaraaraara)
+{
+    
+    
+}
+
 #endif

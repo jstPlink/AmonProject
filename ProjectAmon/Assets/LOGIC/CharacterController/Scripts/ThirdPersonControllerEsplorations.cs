@@ -12,7 +12,13 @@ using UnityEngine.InputSystem;
 //#endif
 public class ThirdPersonControllerEsplorations : MonoBehaviour {
 
-    
+
+    [Header("Player")]
+    public bool charActive = true;
+
+
+
+
     [Header("Player")]
     public bool yourTurn = false;
     //public bool clickToMove = false;
@@ -198,7 +204,8 @@ public class ThirdPersonControllerEsplorations : MonoBehaviour {
                     }
                 }
             }
-            if (thisAgent.enabled) {
+            if (thisAgent.enabled && charActive) 
+            {
                 if (thisAgent.remainingDistance > thisAgent.stoppingDistance) {
                     Move(thisAgent.desiredVelocity.normalized, thisAgent.desiredVelocity.magnitude);
                 } else {
